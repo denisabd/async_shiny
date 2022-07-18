@@ -155,7 +155,7 @@ plotServer <- function(id, df) {
   )
 }
 
-# creating a cluster of two workers
+# creating a cluster of four workers
 plan(multisession, workers = 4)
 
 data("txhousing")

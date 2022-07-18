@@ -5,8 +5,7 @@ library(promises)
 library(shinycssloaders)
 library(echarts4r)
 
-# creating a cluster of two workers
-plan(sequential)
+# creating a cluster of four workers
 plan(multisession, workers = 4)
 
 # For standard module
