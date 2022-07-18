@@ -170,6 +170,7 @@ df <- txhousing %>%
 # app ---------------------------------------------------------------------
 ui <- fluidPage(
   h3("Plot Studio"),
+  p("Application deliberately uses a 5 second timeout for plotting the first plot to demonstrate both cross-session and intra-session asyncronity. Notice that the simple iris plot is rendered right away, while the echarts object is still rendering."),
   plotUI("main"),
   plotOutput("plot")
 )

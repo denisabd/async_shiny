@@ -1,0 +1,14 @@
+name: async_shiny
+title: async_shiny
+username:
+account: deny
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 6657095
+bundleId: 6107578
+url: https://deny.shinyapps.io/async_shiny/
+when: 1658141424.06317
+lastSyncTime: 1658141424.06319
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: app.R|app_async.R|functions.R|LICENSE|module.R|module_async.R|README.html|README.md
