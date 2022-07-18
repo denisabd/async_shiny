@@ -1,10 +1,7 @@
 library(echarts4r)
 library(tidyverse)
 
-
 plot_bar <- function(df) {
-  
-  Sys.sleep(5)
   
   measure <- df %>%
     dplyr::ungroup() %>%
@@ -35,10 +32,7 @@ plot_bar <- function(df) {
   return(plot)
 }
 
-
 plot_pie <- function(df) {
-  
-  Sys.sleep(5)
   
   measure <- df %>%
     dplyr::ungroup() %>%

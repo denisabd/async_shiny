@@ -5,10 +5,13 @@ library(promises)
 library(shinycssloaders)
 library(echarts4r)
 
+# creating a cluster of two workers
 plan(sequential)
+plan(multisession, workers = 4)
 
 # For standard module
-source("module.R")
+#source("module_async.R")
+source("module_test.R")
 source("functions.R")
 
 data("txhousing")
@@ -21,11 +24,17 @@ df <- txhousing %>%
 
 ui <- fluidPage(
   h3("Plot Studio"),
-  plotUI("main")
+  plotUI("main"),
+  plotOutput("plot")
 )
 
 server <- function(input, output, session) {
+  
   plotServer("main", reactive(df))
+  
+  output$plot <- renderPlot({
+    plot(iris)
+  })
 }
 
 shinyApp(ui, server)
