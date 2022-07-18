@@ -8,9 +8,6 @@ library(echarts4r)
 
 
 # plotting functions ------------------------------------------------------
-library(echarts4r)
-library(tidyverse)
-
 plot_bar <- function(df) {
   
   measure <- df %>%
